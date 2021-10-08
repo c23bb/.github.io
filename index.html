@@ -1,221 +1,318 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>The Sickest Website</title>
-
-<style type="text/css">
-
-/*/// FOR YOU TO DO://////
-
-1. CHANGE all #mollyJ TO #your 1st name and last initial and then change change the link in url() to a link of an _image_ of you or something that represents you. NOTE: To get a link to an image online, google search for the image and then you have to double finger click on the image and select the option to "copy image address." You cannot use a picture of yourself or someone else in for your person card. Sorry:( 
-
-2. Change the 
-////////////////////////////////////////
-*/
-
-.benjaminm {
- background-image: url(https://cdn.dribbble.com/users/604891/screenshots/14573805/media/014713cf3698fecd90e07ae4bd43fd6a.png?compress=1&resize=1600x1200); 
+  <title>Ben's sweet site</title>
+  <style type="text/css">
   
-}
 
-/*FOR YOU TO DO: add some hover effects!
+  /* Desktop Start */
+    #desktop{
+      width: 100%;
+      height: 1000px;
+      background: #049394;
+      position: absolute; 
+    }
 
-1. First change mollyK to your name and last initial (it should be the sam as your ID without the #)*/
+    #journal{
+    width: 75px;
+    height: 75px;
+    background-image: url(directory_open_file_mydocs-4.png);
+    position: absolute; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: 300px;
+    left: 10px;
+    }
 
-.benjaminb-effect:hover {
-background-image:url("https://cdn.dribbble.com/users/604891/screenshots/14573805/shaka_mishax.gif"); 
-  background-repeat:no-repeat;
-  background-size:cover;
-  
-}
+    #projects{
+    width: 75px;
+    height: 75px;
+    background-image: url(computer-4.png);
+    position: absolute; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: 425px;
+    left: 10px;
+    }
 
-#benjaminm-name:hover{
-animation-name:expand; 
-  animation-duration:1s;
-  animation-iteration-count:infinite;
-  transition:.5s ease-in-out;
-}
+    #video{
+    width: 75px;
+    height: 75px;
+    background-image: url(camera3_vid-4.png);
+    position: absolute; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: 550px;
+    left: 10px;
+    }
+
+    #music{
+    width: 75px;
+    height: 75px;
+    background-image: url(cd_audio_cd_a-4.png);
+    position: absolute; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: 675px;
+    left: 10px;
+    }
+
+    #start{
+      width: 65px;
+      height: 25px;
+      position: absolute;
+      background-image: url(images.png);
+      background-repeat: no-repeat;
+      background-size:cover;
+      top: 975px;
+    }
+
+     #benjsite{
+          width: 200px;
+          height: 25px;
+          position: absolute;
+          background-image: url(benjsite.png);
+          background-repeat: no-repeat;
+          background-size:cover;
+          top: 975px;
+          left:65px; 
+        }
+
+    #bottombar{
+      width: 100%;
+      height: 25px;
+      position: absolute;
+      background: #c2c2c2;
+      top: 975px;
+    }
 
 
-/* BELOW THIS YOU'RE NOT CHANGING ANYTHING */
-.container {
-    width: 15vw;
-    margin: 1%;
-    text-align: center;
-    color: rgb(105, 105, 105);
-    font-size: 18px;
-    display: inline-block;
-  backface-visibility:hidden;
-  transition:2s ease-in-out;
-  border-radius:10%
+  /* Desktop Top Stop */
 
-}
+  /* Header Start */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+    body{
+      margin: 0px;
+      cursor: url("retropinkahnd.cur"), default;
+    }
+
+    a{
+      cursor: url("http://www.rw-designer.com/cursor-view/110027.png"), default;
+    }
+
+/* Header End */
 
 
-.headshot {
-  backface-visibility: visible;
-  perspective: 1000;
-  background-color: rgba(245, 245, 245, 0.5);
-  width: 15vw;
-  height: 15vw;
-  position: relative;
-  display: inline-block;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10%;
-  top: 0%;
-  left: 0%;
-  margin-bottom: 5%;
-  background-color: rgb(176, 176, 176);
-  border: 1px grey solid;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  /*-webkit-transition: all 0.5s ease-out;
--moz-transition: all 0.5s ease-out;*/
-  transition: 0.5s ease-in;
-}
+/* Cool Header thing */
+    @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Yellowtail&display=swap");
 
-/*Below is the styling for a div with the class name of "your-name." It's is the div containing  the text of your name, which is underneath the headshot div. This is what you'll click on to show the description on the "back" of your card.*/
+  :root {
+    --navy: #0c0c4a;
+    --dark-navy: #060726;
+    --pink: rgba(213, 84, 213, 1);
+    --pink2: rgba(213, 84, 213, 0.7);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *::before,
+  ::after {
+    content: "";
+    position: absolute;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: grid;
+    filter: saturate(130%) contrast(125%);
+  }
+  #image {
+    width: 100%;
+    height: 300px;
+    background: var(--navy);
+    display: grid;
+    position: sticky;
+    overflow: hidden;
 
-.your-name {
-  background-color:red;
-  backface-visibility: visible;
+  }
+  #top {
+    height: 67%;
+    background: linear-gradient(transparent 50%, hotpink 160%);
+    box-shadow: 0 15px 50px 1px white;
+    position: relative;
+  }
+  #sky {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+      pink 2px,
+      transparent 3px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(90deg, pink 2px, transparent 3px, transparent 40px)
+      10px 0;
+    filter: drop-shadow(0 0 1px magenta) drop-shadow(0 0 3px magenta)
+    drop-shadow(0 0 7px cyan);
+    animation: move 10s linear infinite;
+    opacity: 0.2;
+    }
+  #bottom {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: perspective(500px) rotateX(65deg);
+    bottom: -15%;
+    background: linear-gradient(
+      90deg,
+      hotpink -60%,
+      transparent 40%,
+      transparent 60%,
+      hotpink 140%
+    );
+    clip-path: polygon(0 100%, 0 55%, 100% 55%, 100% 100%);
+  }
+
+  #ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    background: repeating-linear-gradient(
+        white 2px,
+        transparent 3px,
+        transparent 30px
+    ),
+      repeating-linear-gradient(90deg, white 2px, transparent 3px, transparent 40px);
+    filter: drop-shadow(0 0 1px cyan) drop-shadow(0 0 3px cyan)
+      drop-shadow(0 0 7px cyan);
+    animation: move 10s linear infinite;
+  }
+
+#text {
+  position: absolute;
   z-index: 10;
-  position: relative;
-  top: 0%;
-  font-size: 2.5vw;
-  font-family: Quicksand, sans-serif;
-  color: rgb(105, 105, 105);
-}
-
-/*Below is a class with the name "description-invisible." The "description" is the class name I've given to a div which is the child of the headshot div. Even though it's right on top of the headshot div, we don't see it because it has an opacity of 0 and is invisible!*/
-
-.description-invisible {
-  z-index: -10;
-  opacity: 0;
-/*   transform: rotateY(0deg); */
-  transition: 0.5s ease-in-out;
-  font-family: Quicksand, sans-serif;
-  font-size: 1.25vw;
-  position: relative;
   width: 100%;
   height: 100%;
-/*   text-align: left; */
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
 }
-
-/*
-Below is the class name and styling we give to the description div when we click on the divs with the class "your-name."" It makes the description div visible by giving it an opacity of 1. It also obviously has other CSS properties which make the description div look similar to the headshot div. 
-*/
-.description-apparent {
-/*   pointer-events: none; */
-  transform:rotateY(180deg);
-  z-index: 12;
-  text-align: left;
-  perspective: 1000;
-  transition-delay: 0.5s;
-  transition: 0.1s ease-in;
-  transform: rotateY(-180deg);
-  font-family: Quicksand, sans-serif;
-  font-size: 1.25vw;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  animation-name: fadeToTransparent;
-  animation-duration: 8s;
-  background-color: rgb(176, 176, 176);
-  width: 95%;
-  height: 95%;
-  border-radius: 10%;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  padding: 2%;
+h1 {
+  color: transparent;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  font-size: 5em;
+  transform: translatey(25px);
+  background: linear-gradient(
+    cornflowerblue 30%,
+    white,
+    darkmagenta 60%,
+    cornflowerblue 100%
+  );
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px silver;
+  filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
+  animation: bg-shift 0.5s ease-in-out infinite alternate;
 }
-
-/*Below are the properties of the animation that will fade divs with the "description-apparent" class back to being transparent with an opacity of 0. */
-
-@keyframes fadeToTransparent {
+h2 {
+  color: white;
+  font-family: "Yellowtail", cursive;
+  font-weight: 100;
+  font-size: 4em;
+  transform: translatey(-10px) rotatez(-5deg);
+  text-shadow: 0 0 3px magenta, 0 0 7px magenta, 0 0 15px black, 0 0 15px black;
+  animation: hover 1s ease-in-out infinite;
+}
+@keyframes move {
+  to {
+    background-position-y: 2000px;
+  }
+}
+@keyframes bg-shift {
   0% {
-    opacity: 1;
-    z-index: 1000;
+    background-position: 0 -25px;
   }
-
-  50% {
-    opacity: 1;
-    z-index: 1000;
-  }
-
-  90% {
-    opacity: 1;
-    z-index: 1000;
-  }
-
   100% {
-    opacity: 1;
-    z-index: 1000;
+    background-position: 0 25px;
   }
 }
 
-.headshot-flip {
-  text-align:right;
-/*     pointer-events: none; */
-  transform: rotateY(180deg);
-  z-index: -5;
-  width: 15vw;
-  height: 15vw;
-  background-color: rgba(245, 245, 245, 0.5);
-  background-image: url();
-  margin-bottom: 10%;
-  margin-right: 2%;
-  border-radius: 10%;
-  text-align: left;
-  z-index: -10;
+@keyframes hover {
+  0% {
+    transform: translatey(-10px) rotatez(-5deg) perspective(200px) translatez(0);
+  }
+  50% {
+    transform: translatey(-10px) rotatez(-5deg) perspective(200px)
+      translatez(50px);
+  }
+  100% {
+    transform: translatey(-10px) rotatez(-5deg) perspective(200px) translatez(0);
+  }
 }
 
-  
-  </style>
+a {
+  width: 100px;
+  height: 75px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+img {
+  width: 100%;
+}
+
+
+
+
+
+</style>
+
 </head>
 <body>
-    <!-- DIRECTIONS: 
-This grayed out text is "commented out" so it doesn't show up in your code! Please don't change this part!
- 
-look for ///// because that indicates that there's stuff for you to do!
 
-BEFORE CHANGING ANY OF THE CODE, FORK THIS CARD. THERE'S AN OPTION ON THE LOWER RIGHT TO "FORK" IT. DO THAT! DO NOT EDIT THIS CODE DIRECTLY.
-
-In this panel (called HTML) and the panel to the right (called CSS) (but NOT the JS section) replace all the words "mollyJ' with your name and last initial. For instance, if your name is Cami Lax you would replace "mollyJ" with "camil". 
-
-Now, find all the words called "mollyK" and replace with your name and _middle_ initial 
+<div id="desktop"></div>
 
 
-You'll see some code that begins with the tag <p>. That stands for "paragraph". Include a quote or something about yourself and a LINK to your github website. You can make that link by changing the "reference" (i.e. the "href") in the <a> tag (which stands for anchor link).
 
-
-<!-- DON'T CHANGE THIS -->
-<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-
-<div class="container" onclick=showDescription() animationend=hideDescription()
-id="benjaminb-name">
-  
-<div id="benjaminb" class="headshot benjaminm benjaminb-effect">
-  
-<div id="benjaminm-description" class="description description-invisible">
-<br>
-  <p>Party On!
-    <a href="https://c23bb.github.io">
-    
-    Sweet Website
-    
-    </a></p>
-  
-
+<!-- COOL TOP THING -->
+<div id="image">
+  <div id="top">
+    <div id="sky"></div>
+  </div>
+  <div id="bottom">
+    <div id="ground"></div>
+  </div>
+  <div id="text">
+    <h1>Benjamin's Website</h1>
+    <h2>it's a party!!!</h2>
+  </div>
 </div>
-</div>
-Benjamin
-</div>
+
+
+<div id="journal"> <a href="journal.html"></a> </div>
+
+<div id="projects"> <a href="projects.html"></a> </div>
+
+<div id="video"> <a href="https://www.youtube.com/watch?v=75p-N9YKqNo"></a> </div>
+
+<div id="music"></div>
+
+<div id="bottombar"></div>   
+
+<div id="start"></div>
+
+<div id="benjsite"></div>
+
 
 </body>
 </html>
