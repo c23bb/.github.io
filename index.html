@@ -1,318 +1,227 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Ben's sweet site</title>
-  <style type="text/css">
-  
+	<title>Let's Bounce</title>
 
-  /* Desktop Start */
-    #desktop{
+</head>
+
+<style type="text/css">
+
+  @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+  body{ 
+    background: #000;
+    cursor: url("cur1153.gif"), default;
+  }
+
+   a{
+      cursor: url("gam343.cur"), default;
+    }
+
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+  }
+
+  /*Benweb Start*/
+   .vectro {
+        position: absolute;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.1px #f1f1f1;
+        font-family: 'Righteous', cursive;
+        font-size: 160px;
+      }
+
+      /*.vectro:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+      }*/
+
+   /*   .windows .vectro {
+        -webkit-text-stroke: 4px #f1f1f1;
+      }*/
+
+      .vectro-body {
+        -webkit-background-clip: text;
+        background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+      }
+
+      .vectro-red {
+        color: #F10C20;
+        -webkit-text-fill-color: #F10C20;
+        -webkit-text-stroke: 0;
+        -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+        font-style: italic;
+        padding-right: 20px;
+        animation: redflash 2s infinite;
+      }
+
+
+      @keyframes redflash {
+      0% {opacity: 0%;}
+      9.99% {opacity: 0%;}
+      10% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+     /* .windows .vectro-red {
+        padding-right: 30px;
+      }*/
+
+      .vectro-green {
+        color: #6BFF2B;
+        -webkit-text-fill-color: #6BFF2B;
+        -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+        animation: greenflash 2s infinite;
+      }
+
+
+      @keyframes greenflash {
+      0% {opacity: 0%;}
+      43.32% {opacity: 0%;}
+      43.33% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+    /*  .windows .vectro-green {
+        padding-right: 30px;
+        margin-left: -30px;
+      }*/
+
+      .vectro-blue {
+        color: #3F59F4;
+        -webkit-text-fill-color: #3F59F4;
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+        animation: blueflash 2s infinite;
+      }
+
+
+      @keyframes blueflash {
+      0% {opacity: 0%;}
+      76.65% {opacity: 0%;}
+      76.66% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+    /*  .windows .vectro-blue {
+        padding-right: 30px;
+        margin-left: -30px;
+      }*/
+
+    /*Benweb End*/
+
+  #portalbkg{
       width: 100%;
-      height: 1000px;
-      background: #049394;
-      position: absolute; 
-    }
-
-    #journal{
-    width: 75px;
-    height: 75px;
-    background-image: url(directory_open_file_mydocs-4.png);
-    position: absolute; 
-    background-repeat: no-repeat;
-    background-size:cover;
-    top: 300px;
-    left: 10px;
-    }
-
-    #projects{
-    width: 75px;
-    height: 75px;
-    background-image: url(computer-4.png);
-    position: absolute; 
-    background-repeat: no-repeat;
-    background-size:cover;
-    top: 425px;
-    left: 10px;
-    }
-
-    #video{
-    width: 75px;
-    height: 75px;
-    background-image: url(camera3_vid-4.png);
-    position: absolute; 
-    background-repeat: no-repeat;
-    background-size:cover;
-    top: 550px;
-    left: 10px;
-    }
-
-    #music{
-    width: 75px;
-    height: 75px;
-    background-image: url(cd_audio_cd_a-4.png);
-    position: absolute; 
-    background-repeat: no-repeat;
-    background-size:cover;
-    top: 675px;
-    left: 10px;
-    }
-
-    #start{
-      width: 65px;
-      height: 25px;
+      height: 100%;
+      background-image: url(Portal.GIF);
       position: absolute;
-      background-image: url(images.png);
       background-repeat: no-repeat;
       background-size:cover;
-      top: 975px;
-    }
+      background-position: center;
+     }
 
-     #benjsite{
-          width: 200px;
-          height: 25px;
-          position: absolute;
-          background-image: url(benjsite.png);
-          background-repeat: no-repeat;
-          background-size:cover;
-          top: 975px;
-          left:65px; 
-        }
 
-    #bottombar{
-      width: 100%;
-      height: 25px;
+  #orb{
+      width: 240px;
+      height: 231px;
+      background-image: url(Orb.GIF);
       position: absolute;
-      background: #c2c2c2;
-      top: 975px;
-    }
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      top: 41%;
+      left: 41%;
+      align-items: center;
+      animation: orbgrow 5s infinite;
+      }
 
 
-  /* Desktop Top Stop */
-
-  /* Header Start */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-
-    body{
-      margin: 0px;
-      cursor: url("retropinkahnd.cur"), default;
-    }
-
-    a{
-      cursor: url("http://www.rw-designer.com/cursor-view/110027.png"), default;
-    }
-
-/* Header End */
+      @keyframes orbgrow {
+      0% {width: 240px; height: 231px;}
+      50% {width: 120px; height: 115.5px;top: 45%;
+      left: 45%;}
+      100% {width: 240px; height: 231px;}
+      }
 
 
-/* Cool Header thing */
-    @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Yellowtail&display=swap");
+/*	#backgroundcolor{
+		  width: 100%;
+     	height: 100%;
+      background-color: black;
+     	position: absolute;
+     	margin: 0px;
+     	padding: 0px;
+      opacity: 100%;
+     	animation: Backgroundchange 10s;
+     }
 
-  :root {
-    --navy: #0c0c4a;
-    --dark-navy: #060726;
-    --pink: rgba(213, 84, 213, 1);
-    --pink2: rgba(213, 84, 213, 0.7);
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  *::before,
-  ::after {
-    content: "";
-    position: absolute;
-  }
-  body {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    display: grid;
-    filter: saturate(130%) contrast(125%);
-  }
-  #image {
-    width: 100%;
-    height: 300px;
-    background: var(--navy);
-    display: grid;
-    position: sticky;
-    overflow: hidden;
+     @keyframes Backgroundchange {
+  		0% {opacity: 0%;}
+      30% {opacity: 0%;}
+  		100% {opacity: 100%;}
+		}*/
 
-  }
-  #top {
-    height: 67%;
-    background: linear-gradient(transparent 50%, hotpink 160%);
-    box-shadow: 0 15px 50px 1px white;
-    position: relative;
-  }
-  #sky {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+     /*#Delorian{
+		  width: 200px;
+     	height: 100px;
+      background-image: url(delorean.png);
+     	position: absolute;
+     	background-repeat: no-repeat;
+     	background-size:cover;
+      animation: Backgroundchange 30s infinite;
+     	}
 
-    background: repeating-linear-gradient(
-      pink 2px,
-      transparent 3px,
-      transparent 30px
-    ),
-    repeating-linear-gradient(90deg, pink 2px, transparent 3px, transparent 40px)
-      10px 0;
-    filter: drop-shadow(0 0 1px magenta) drop-shadow(0 0 3px magenta)
-    drop-shadow(0 0 7px cyan);
-    animation: move 10s linear infinite;
-    opacity: 0.2;
-    }
-  #bottom {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    transform: perspective(500px) rotateX(65deg);
-    bottom: -15%;
-    background: linear-gradient(
-      90deg,
-      hotpink -60%,
-      transparent 40%,
-      transparent 60%,
-      hotpink 140%
-    );
-    clip-path: polygon(0 100%, 0 55%, 100% 55%, 100% 100%);
-  }
-
-  #ground {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 55%;
-    background: repeating-linear-gradient(
-        white 2px,
-        transparent 3px,
-        transparent 30px
-    ),
-      repeating-linear-gradient(90deg, white 2px, transparent 3px, transparent 40px);
-    filter: drop-shadow(0 0 1px cyan) drop-shadow(0 0 3px cyan)
-      drop-shadow(0 0 7px cyan);
-    animation: move 10s linear infinite;
-  }
-
-#text {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  justify-content: center;
-}
-h1 {
-  color: transparent;
-  font-family: "Russo One", sans-serif;
-  text-transform: uppercase;
-  font-size: 5em;
-  transform: translatey(25px);
-  background: linear-gradient(
-    cornflowerblue 30%,
-    white,
-    darkmagenta 60%,
-    cornflowerblue 100%
-  );
-  background-size: contain;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 1px silver;
-  filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
-  animation: bg-shift 0.5s ease-in-out infinite alternate;
-}
-h2 {
-  color: white;
-  font-family: "Yellowtail", cursive;
-  font-weight: 100;
-  font-size: 4em;
-  transform: translatey(-10px) rotatez(-5deg);
-  text-shadow: 0 0 3px magenta, 0 0 7px magenta, 0 0 15px black, 0 0 15px black;
-  animation: hover 1s ease-in-out infinite;
-}
-@keyframes move {
-  to {
-    background-position-y: 2000px;
-  }
-}
-@keyframes bg-shift {
-  0% {
-    background-position: 0 -25px;
-  }
-  100% {
-    background-position: 0 25px;
-  }
-}
-
-@keyframes hover {
-  0% {
-    transform: translatey(-10px) rotatez(-5deg) perspective(200px) translatez(0);
-  }
-  50% {
-    transform: translatey(-10px) rotatez(-5deg) perspective(200px)
-      translatez(50px);
-  }
-  100% {
-    transform: translatey(-10px) rotatez(-5deg) perspective(200px) translatez(0);
-  }
-}
-
-a {
-  width: 100px;
-  height: 75px;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-img {
-  width: 100%;
-}
-
+      #Delorian{
+      width: 200px;
+      height: 100px;
+      background-image: url(delorean.png);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+        animation: Backgroundchange 30s infinite;
+      }
+*/
 
 
 
 
 </style>
 
-</head>
+
 <body>
-
-<div id="desktop"></div>
-
-
-
-<!-- COOL TOP THING -->
-<div id="image">
-  <div id="top">
-    <div id="sky"></div>
+  <div id="portalbkg"> </div>
+  <div class="center">
+    <h1 class="vectro">
+      <span class="vectro-body">BENWEB</span>
+      <span class="vectro-red">I</span>
+      <span class="vectro-green">I</span>
+      <span class="vectro-blue">I</span>
+    </h1>
   </div>
-  <div id="bottom">
-    <div id="ground"></div>
-  </div>
-  <div id="text">
-    <h1>Benjamin's Website</h1>
-    <h2>it's a party!!!</h2>
-  </div>
-</div>
 
-
-<div id="journal"> <a href="journal.html"></a> </div>
-
-<div id="projects"> <a href="projects.html"></a> </div>
-
-<div id="video"> <a href="https://www.youtube.com/watch?v=75p-N9YKqNo"></a> </div>
-
-<div id="music"></div>
-
-<div id="bottombar"></div>   
-
-<div id="start"></div>
-
-<div id="benjsite"></div>
+    <a href="home.html"><div id="orb"></div></a> 
 
 
 </body>
+
 </html>

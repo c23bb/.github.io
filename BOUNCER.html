@@ -7,14 +7,128 @@
 </head>
 
 <style type="text/css">
-  #background{
-    width: 100%;
-      height: 100%;
-      background-color: black;
-      position: absolute;
-      margin: 0px;
-      padding: 0px;
-     }
+
+  @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+  body{ 
+    background: #000;
+    cursor: url("cur1153.gif"), default;
+  }
+
+   a{
+      cursor: url("gam343.cur"), default;
+    }
+
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+  }
+
+  /*Benweb Start*/
+   .vectro {
+        position: absolute;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.1px #f1f1f1;
+        font-family: 'Righteous', cursive;
+        font-size: 160px;
+      }
+
+      /*.vectro:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+      }*/
+
+   /*   .windows .vectro {
+        -webkit-text-stroke: 4px #f1f1f1;
+      }*/
+
+      .vectro-body {
+        -webkit-background-clip: text;
+        background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+      }
+
+      .vectro-red {
+        color: #F10C20;
+        -webkit-text-fill-color: #F10C20;
+        -webkit-text-stroke: 0;
+        -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+        font-style: italic;
+        padding-right: 20px;
+        animation: redflash 2s infinite;
+      }
+
+
+      @keyframes redflash {
+      0% {opacity: 0%;}
+      9.99% {opacity: 0%;}
+      10% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+     /* .windows .vectro-red {
+        padding-right: 30px;
+      }*/
+
+      .vectro-green {
+        color: #6BFF2B;
+        -webkit-text-fill-color: #6BFF2B;
+        -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+        animation: greenflash 2s infinite;
+      }
+
+
+      @keyframes greenflash {
+      0% {opacity: 0%;}
+      43.32% {opacity: 0%;}
+      43.33% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+    /*  .windows .vectro-green {
+        padding-right: 30px;
+        margin-left: -30px;
+      }*/
+
+      .vectro-blue {
+        color: #3F59F4;
+        -webkit-text-fill-color: #3F59F4;
+        -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+        -webkit-text-stroke: 0;
+        font-style: italic;
+        padding-right: 20px;
+        margin-left: -20px;
+        animation: blueflash 2s infinite;
+      }
+
+
+      @keyframes blueflash {
+      0% {opacity: 0%;}
+      76.65% {opacity: 0%;}
+      76.66% {opacity: 100%;}
+      99.99% {opacity: 100%;}
+      100% {opacity: 0%;}
+      }
+
+    /*  .windows .vectro-blue {
+        padding-right: 30px;
+        margin-left: -30px;
+      }*/
+
+    /*Benweb End*/
 
   #portalbkg{
       width: 100%;
@@ -24,24 +138,33 @@
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;
-      animation: Backgroundchange 30s;
      }
 
 
-  #sandwich{
-      width: 100%;
-      height: 100%;
-      background-image: url(sandwich.GIF);
+  #orb{
+      width: 240px;
+      height: 231px;
+      background-image: url(Orb.GIF);
       position: absolute;
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;
-      opacity: 100%;
-      animation: Backgroundchange 10s;
-     }
+      top: 41%;
+      left: 41%;
+      align-items: center;
+      animation: orbgrow 5s infinite;
+      }
 
 
-	#backgroundcolor{
+      @keyframes orbgrow {
+      0% {width: 240px; height: 231px;}
+      50% {width: 120px; height: 115.5px;top: 45%;
+      left: 45%;}
+      100% {width: 240px; height: 231px;}
+      }
+
+
+/*	#backgroundcolor{
 		  width: 100%;
      	height: 100%;
       background-color: black;
@@ -56,7 +179,7 @@
   		0% {opacity: 0%;}
       30% {opacity: 0%;}
   		100% {opacity: 100%;}
-		}
+		}*/
 
      /*#Delorian{
 		  width: 200px;
@@ -80,14 +203,23 @@
 */
 
 
+
+
 </style>
 
 
 <body>
-  <p> Welcome to the future</p>
+  <div id="portalbkg"> </div>
+  <div class="center">
+    <h1 class="vectro">
+      <span class="vectro-body">BENWEB</span>
+      <span class="vectro-red">I</span>
+      <span class="vectro-green">I</span>
+      <span class="vectro-blue">I</span>
+    </h1>
+  </div>
 
-	<div id="portalbkg"> </div>
-	<div id="sandwich"> </div>
+    <a href="home.html"><div id="orb"></div></a> 
 
 
 </body>
