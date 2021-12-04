@@ -281,71 +281,6 @@ img {
     }
 
 
-/*POPUP BACKGROUND!*/
-
-      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-      
-      .overlay {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        transition: opacity 500ms;
-        visibility: hidden;
-        opacity: 0;
-      }
-
-      .overlay:target {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .popup {
-        margin: 70px auto;
-        padding: 20px;
-        background: lightgrey;
-        width: 600px;
-        height: 450px;
-        position: relative;
-        transition: all 5s ease-in-out;
-      }
-
-      .popup h3 {
-        z-index: 1;
-        text-align: center;
-        margin: 0px;
-        top: -10px;
-        font-size: 30px;
-        color: lightgrey;
-        font-family: 'VT323', monospace;
-        background: darkblue;
-      }
-
-      .popup .close {
-        position: absolute;
-        z-index: 2;
-        top: 2px;
-        right: 10px;
-        transition: all 200ms;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #333;
-      }
-
-      .blue {
-        position: absolute;
-        width: 300px;
-        height: 100px;
-        background: blue;
-      }
-
-      .popup .close:hover {
-        color: blue;
-      }
-
 </style>
 
 
@@ -371,21 +306,7 @@ img {
 </div>
 
 
-<div id="journal">  <a href="#popup1"></a> </div>
-
- 
-
-  <div id="popup1" class="overlay">
-    
-    <div class="popup">
-      <a class="close" href="#">&times;</a>
-      <h2>Journal</h2>
-      <div class="content">
-        <iframe src="https://c23bb.github.io/journal.html" width="596" height="425"></iframe>
-      </div>
-    </div>
-
-  </div>
+<div id="journal"> <a href="journal.html"></a> </div>
 
 <div id="projects"> <a href="projects.html"></a> </div>
 

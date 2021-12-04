@@ -4,6 +4,7 @@
   <title>Ben's sweet site</title>
   <style type="text/css">
   
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
   /* Desktop Start */
     #desktop{
@@ -24,6 +25,15 @@
     left: 10px;
     }
 
+    #journalText{
+    position: absolute; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    color: white;
+    top: 460px;
+    left: 135px;
+    }
+
     #projects{
     width: 75px;
     height: 75px;
@@ -33,6 +43,15 @@
     background-size:cover;
     top: 425px;
     left: 10px;
+    }
+
+    #projectsText{
+    position: absolute; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    color: white;
+    top: 585px;
+    left: 130px;
     }
 
     #video{
@@ -46,6 +65,16 @@
     left: 10px;
     }
 
+    #videoText{
+    position: absolute; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    color: white;
+    top: 710px;
+    left: 140px;
+    }
+
+
     #music{
     width: 75px;
     height: 75px;
@@ -55,6 +84,35 @@
     background-size:cover;
     top: 675px;
     left: 10px;
+    }
+
+    #musicText{
+    position: absolute; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    color: white;
+    top: 835px;
+    left: 140px;
+    }
+
+    #cookieicon{
+    width: 75px;
+    height: 75px;
+    background-image: url(cookie.png);
+    position: absolute; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    top: 800px;
+    left: 10px;
+    }
+
+    #cookieText{
+    position: absolute; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    color: white;
+    top: 960px;
+    left: 140px;
     }
 
     #start{
@@ -99,6 +157,7 @@
 
     a{
       cursor: url("http://www.rw-designer.com/cursor-view/110027.png"), default;
+      color: white;
     }
 
 /* Header End */
@@ -281,11 +340,50 @@ img {
     }
 
 
+
+
 </style>
 
 
 </head>
 <body>
+<script type="text/javascript">
+  
+  var cookiepics = ["Fortune1.png", "Fortune2.png", "Fortune3.png"]
+  var cookieIcon = document.getElementById('cookieicon')
+
+    function makecookie() {
+
+
+    
+        var left = Math.random()*1000;
+        var top = Math.random()*1000
+        var pickPics = Math.floor(Math.random()*3)
+
+      
+
+      var cookie = document.createElement('div');
+      document.body.appendChild(cookie);
+      cookie.style.width = "420px";
+      cookie.style.height = "184px";
+      cookie.style.position = "absolute"
+      cookie.style.top = top + "px";
+      cookie.style.left = left + "px";
+      cookie.style.backgroundImage = "url("+ cookiepics[pickPics]+")";
+      cookie.style.backgroudSize = "cover";
+
+
+
+    }
+      cookieIcon.addEventListener("click", makecookie)
+
+
+
+</script>
+
+
+
+
 
 <div id="desktop"></div>
 
@@ -307,12 +405,20 @@ img {
 
 
 <div id="journal"> <a href="journal.html"></a> </div>
+<div id="journalText"> <p><a href="journal.html">Journal</a></p></div>
 
 <div id="projects"> <a href="projects.html"></a> </div>
+<div id="projectsText"> <p><a href="projects.html">Projects</a></p></div>
 
 <div id="video"> <a href="https://www.youtube.com/watch?v=75p-N9YKqNo"></a> </div>
+<div id="videoText"> <p><a href="https://www.youtube.com/watch?v=75p-N9YKqNo">Video</a></p></div>
 
 <div id="music"></div>
+<div id="musicText"> <p><a href="">Bangers</a></p> </div>
+
+
+<div id="cookieicon"></div>
+<div id="cookieText"> <p><a href="">Fortune</a></p></div>
 
 <div id="bottombar"></div>   
 

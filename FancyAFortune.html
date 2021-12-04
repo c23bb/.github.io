@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fancy A Fortune</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var cookiepics = ["Fortune1.png", "Fortune2.png", "Fortune3.png"]
+
+		function makecookie() {
+
+
+		
+				var left = Math.random()*1000;
+				var top = Math.random()*1000
+				var pickPics = Math.floor(Math.random()*3)
+
+			
+
+			var cookie = document.createElement('div');
+			document.body.appendChild(cookie);
+			cookie.style.width = "420px";
+			cookie.style.height = "184px";
+			cookie.style.position = "absolute"
+			cookie.style.top = top + "px";
+			cookie.style.left = left + "px";
+			cookie.style.backgroundImage = "url("+ cookiepics[pickPics]+")";
+			cookie.style.backgroudSize = "cover";
+
+
+
+		}
+			document.addEventListener("click", makecookie)
+
+
+
+
+	</script>
+
+</body>
+</html>
