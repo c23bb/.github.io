@@ -347,41 +347,6 @@ img {
 
 </head>
 <body>
-<script type="text/javascript">
-  
-  var cookiepics = ["Fortune1.png", "Fortune2.png", "Fortune3.png"]
-  var cookieIcon = document.getElementById('cookieicon')
-
-    function makecookie() {
-
-
-    
-        var left = Math.random()*1000;
-        var top = Math.random()*1000
-        var pickPics = Math.floor(Math.random()*3)
-
-      
-
-      var cookie = document.createElement('div');
-      document.body.appendChild(cookie);
-      cookie.style.width = "420px";
-      cookie.style.height = "184px";
-      cookie.style.position = "absolute"
-      cookie.style.top = top + "px";
-      cookie.style.left = left + "px";
-      cookie.style.backgroundImage = "url("+ cookiepics[pickPics]+")";
-      cookie.style.backgroudSize = "cover";
-
-
-
-    }
-      cookieIcon.addEventListener("click", makecookie)
-
-
-
-</script>
-
-
 
 
 
@@ -425,6 +390,48 @@ img {
 <div id="start"></div>
 
 <div id="benjsite"></div>
+
+
+<script type="text/javascript">
+  
+  var cookiepics = ["Fortune1.png", "Fortune2.png", "Fortune3.png"]
+  var cookieicon = document.getElementById("cookieicon")
+
+    function makecookie() {
+
+
+    
+        var left = 100+Math.random()*700;
+        var top = Math.random()*700
+        var pickPics = Math.floor(Math.random()*3)
+
+      
+
+      var cookie = document.createElement('div');
+      document.body.appendChild(cookie);
+      cookie.style.width = "420px";
+      cookie.style.height = "184px";
+      cookie.style.position = "absolute"
+      cookie.style.top = top + "px";
+      cookie.style.left = left + "px";
+      cookie.style.backgroundImage = "url("+ cookiepics[pickPics]+")";
+      cookie.style.backgroudSize = "cover";
+      cookie.style.transition = "2s";
+
+
+      function cookieNoHere (){
+        cookie.style.opacity = "0";
+      }
+
+      setTimeout(cookieNoHere, 2000)
+
+    }
+      cookieicon.addEventListener("click", makecookie)
+
+
+
+</script>
+
 
 
 </body>
