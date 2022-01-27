@@ -19,11 +19,9 @@
 		  border-radius: 4px;
 		  font-size: 16px;
 		  background-color: #B6D3BF;
-		  background-image: url(hotdog1.png);
 		  background-size:contain;
 		  background-position: left;
  		  background-repeat: no-repeat;
-		  padding: 5px 20px 6px 45px;
 		}
 
 	body {
@@ -35,6 +33,7 @@
 		color: brown;
 		background-color: #B6D3BF;
 		border: solid brown;
+		z-index: 10;
 	}
 
 	#hotDogHead{
@@ -76,6 +75,8 @@
 		right: 200px;
 		}
 
+	
+
 	</style>
 
 
@@ -106,30 +107,31 @@
 	<h1>How many dogs did you <br> 
 	eat this year?</h1>
 	<input type="number" id="hotDogInput"> </input>
-	<button onclick="makeName()">enter</button>
+	<button id="enterButton">enter</button>
 
 	<p id="demo"></p>
 
 <script type="text/javascript">
   
-  
+  var hotDogNames = ["C'mon", "Glizzy Gobler", "Glizzy Gladiator"];
+  var button = document.getElementById("enterButton");
+  var input = document.getElementById("hotDogInput").value;
+  var demo = document.getElementById("demo")
 
+var name;
+function makeName () {
+    if (input == 0) {name = 0}
+     if  (0 < input < 10) {name = 1}
+     if  (input > 10) {name = 2}
+   	console.log(name)
+ 	demo.innerHTML = hotDogNames[name];
 
-
-    function makeName() {
-
-    	var hotDogNames = ["Loser", "Glizzy Gobler", "Glizzy Gladiator"];
-  		var button = document.getElementById("enterButton");
-  		var input = document.getElementById("hotDogInput").value;
-
-    if (input = 0) {name = 0};
-    else if (0 <= input <= 10) {name = 1};
-    else if (input >= 10) {name = 2};
-   
-  document.getElementById("demo").innerHTML = hotDogNames[name];
 
 	}
-   
+
+button.addEventListener("click", makeName)
+
+    
 
       
 
