@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Hot Digity Dog</title>
 </head>
 <style type="text/css">
 	@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
-	
+	@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+
 	h1 {
 		font-family: 'ZCOOL KuaiLe', cursive;
 		font-size: 50px;
 		color: brown;
 		text-align: center;
-		}
+	}
+
+	h2 {
+		font-family: 'ZCOOL KuaiLe', cursive;
+		font-size: 50px;
+		color: #e1ad01;
+		text-align: center;
+	}
+
+	h5 {
+		font-family: 'ZCOOL KuaiLe', cursive;
+		font-size: 50px;
+		color: #8B0000;
+		text-align: center;
+	}
+
+	p {
+		font-family: 'Rowdies', cursive;
+		font-size: 18px;
+		color: #8B0000;
+		text-align: center;
+	}
 
 	input {
-		  width: 100px;
-		  box-sizing: border-box;
-		  border: 7px solid brown;
-		  border-radius: 4px;
-		  font-size: 16px;
-		  font-color: brown;
-		  background-color: #B6D3BF;
-		  background-size:contain;
-		  background-position: left;
- 		  background-repeat: no-repeat;
- 		  text-align: center;
-		}
+		width: 100px;
+		box-sizing: border-box;
+		border: 7px solid brown;
+		border-radius: 4px;
+		font-size: 16px;
+		font-color: brown;
+		background-color: #B6D3BF;
+		background-size: contain;
+		background-position: left;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
 
 	body {
 		background: #B6D3BF;
@@ -42,128 +66,205 @@
 		z-index: 10;
 	}
 
-	#hotDogHead{
+	a {
+  		color: #780101;
+		font-style: italic;
+	}
+
+	#hotDogHead {
 		width: 600px;
 		height: 600px;
-		background-image: url(Hotdog3.svg);	
+		background-image: url(Hotdog3.svg);
 		background-repeat: no-repeat;
-		background-size:cover;
-  		position: relative;
-  		top: 0px;
-		}
+		background-size: cover;
+		position: relative;
+		top: 0px;
+		margin: auto;
+	}
 
 
-	#hotDogBig{
+	#hotDogBig {
 		width: 600px;
 		height: 600px;
 		background-image: url(Hotdog2.svg);
-		position: absolute;	
+		position: absolute;
 		background-repeat: no-repeat;
-		background-size:cover;
+		background-size: cover;
 		top: 150px;
 		right: 10px;
 		position: absolute;
-		}
+	}
 
-	#hotDogInput{
+	#hotDogInput {
 		top: 200px;
 		right: 200px;
-		}
+	}
 
-	#demo{
+	#demo {
 		top: 0;
 		font-family: 'ZCOOL KuaiLe', cursive;
 		font-size: 50px;
-		color: white;
+		color: #8B0000;
 		text-align: center;
 		z-index: 400;
-		}
+	}
 
-	.screen1{
+	.screen1 {
 		opacity: 1;
 	}
 
-	.screen2{
+	.screen2 {
 		opacity: 0;
 	}
 
 	#pic {
 		display: block;
-		width: 60%;
-		height: 600px;
+		width: 500px;
+		height: 500px;
 		background-size: cover;
+	}
 
-	</style>
+	#description {
+		color: #8B0000;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.pic-center {
+		margin: auto;
+	}
+</style>
+
 
 
 <body>
-	<center> <div id="hotDogHead" class="screen1"></div> </center>
+	<div class="center">
+		<div id="hotDogHead" class="screen1"></div>
+	</div>
 
-	<h1 class="screen1">How many weenies did you <br> 
-	eat this year?</h1>
-	<center> <input type="number" id="hotDogInput" class="screen1"> </input> </center>
-	<center> <button id="enterButton" class="screen1">Calculate</button> </center>
-	
-	<center><p id="demo" class="screen2"> </p></center>
+	<h1 class="screen1">How many weenies did you <br>
+		eat this year?</h1>
+	<div class="center"> <input type="number" id="hotDogInput" class="screen1"> </input> </div>
+	<div class="center"> <button id="enterButton" class="screen1">Calculate</button> </div>
 
-	<center><div id="pic" class="screen2"></div><center>
+	<div class="center">
+		<h2 class="screen2">YOUR GLIZZY TITLE:</h2>
+		<p id="demo" class="screen2"> </p>
+	</div>
 
-	<p id="death"></p>
+	<div class="center">
+		<div id="pic" class="screen2 pic-center"></div>
+	</div>
 
+	<div class="center">
+		<h2 class="screen2">ABOUT INFO</h2>
+		<p id="description" class="screen2"></p>
+		<br>
+		<br>
+	</div>
 
-<script type="text/javascript">
-	var input;
-	var name;
-	var death = document.getElementById('death');
-	var hotDogNames = ["C'mon", "Glizzy Gobler", "Glizzy Gladiator"];
-	var hotDogIcon = ["url(Cmon.png)", "url(GlizzyGobler.png)", "url(GlizzyGladiator.png)"];
-	var button = document.getElementById("enterButton");
-	var demo = document.getElementById("demo");
-	var pic = document.getElementById("pic");
-
-
-function makeName () {
- input = document.getElementById("hotDogInput").value;
-	console.log(input);
-    if (input == 0) {name = 0}
-      if  (0 < input < 10) {name = 1}
-     if  (input > 10) {name = 2}
-   	console.log(name)
- 	demo.innerHTML = "<b>YOU'RE A: </b> <br><br>"+ hotDogNames[name];
- 	pic.style.backgroundImage = hotDogIcon[name];
-	}
-button.addEventListener("click", makeName)
- 
+	<div class="center">
+		<h2 id="minutesOff" class="screen2"></h2>
+		<p id="death" class="screen2"></p>
+		<br>
+		<br>
+		</div>
 
 
+	<div class="center">
+	<h2 class="screen2">YOUR WEINER COUNT</h2>
+	<p id= holyMoly class="screen2">HOLY MOLY LOOK AT ALL THE WEINERS YOU ATE THIS YEAR</p>
+	</div>
+
+	<div class="center">
+		<p id="hotDogRepeater" class="screen2"></p>
+	</div>
+
+	<div class="center">
+		<p id=lotOfDogs class="screen2">THATS A LOT OF DOGS DUDE!</p>
+	</div>
 
 
-var goAway = Array.from(document.getElementsByClassName("screen1"))
-var comeHere = Array.from(document.getElementsByClassName("screen2"))
-
-function screenBlack () {
- 	document.body.style.backgroundColor = "black";
-	goAway.forEach(
-		function (element){
-			element.style.opacity = "0";
-			element.style.width = "0px";
-			element.style.height = "0px";
-
-		});
-	comeHere.forEach(
-		function (element){element.style.opacity = "1"});
-	}
-button.addEventListener("click", screenBlack)
- 
-
-
-
-
-      
+	<script type="text/javascript">
+		var input;
+		var name;
+		var death = document.getElementById('death');
+		var hotDogNames = ["C'mon", "Glizzy Gobbler", "Glizzy Gladiator"];
+		var hotDogIcon = ["url(Cmon.png)", "url(GlizzyGobler.png)", "url(GlizzyGladiator.png)"];
+		var hotDogDescrip = [
+		"<a href=\"https://www.amazon.com/Nathans-Length-Skinless-Beef-Franks/dp/B00M30BEQO/ref=sr_1_2_0o_na?crid=29MZ8LEKOJYW&keywords=HOT+DOGS&qid=1644174505&sprefix=hot+dogs%2Caps%2C159&sr=8-2\">CLICK HERE TO BE BETTER!!!!!!</a>",
+		"GLIZZY GOBBLERS ARE CONSIDERED TRUSTWORTHY, AND LOYAL. THEY ARE VERY ENERGETIC  <br> AND SILLY, MUCH LIKE CLOWNS, AND USUALLY SEEN WITH A PROPELLER CAP OR A UNICYCLE.",
+		"GLIZZY GLADIATORS ARE LEGENDARY AND MAJESTIC. THEY CAN FLY AND FART SPARKLES.<br> THEIR EXISTENCE WAS RUMORED FOR YEARS."
+		];
+		var button = document.getElementById("enterButton");
+		var demo = document.getElementById("demo");
+		var description = document.getElementById("description");
+		var pic = document.getElementById("pic");
+		var lotOfDogs = document.getElementById("lotOfDogs");
+		var holyMoly = document.getElementById("holyMoly");
+		var hotDogRepeater = document.getElementById("hotDogRepeater");
 
 
+		function makeName() {
+			input = document.getElementById("hotDogInput").value;
+			console.log(input);
+			if (input == 0) { name = 0 }
+			if (0 < input && input < 10) { name = 1 }
+			if (input > 10) { name = 2 }
+			console.log("name" + name)
+			demo.innerHTML = hotDogNames[name];
+			minutesOff.innerHTML = input+" MINUTES OFF YOUR LIFE";
+			death.innerHTML = "BY EATING "+input+" HOTDOGS, YOU HAVE TAKEN "+input*36+" MINUTES OFF YOUR LIFE <a href=\"https://www.cnn.com/2021/08/27/health/hot-dog-could-shorten-life-trnd-wellness-scn/index.html\">LEARN MORE</a>";
+			pic.style.backgroundImage = hotDogIcon[name];
+			description.innerHTML = hotDogDescrip[name];
+			hotDogRepeater.innerHTML = `<h5>${"&#127789;".repeat(input)}</h5>`
+			if (input == 0) { 
+				hotDogRepeater.innerHTML ="<h5>&#127849</h5>";
+				lotOfDogs.innerHTML ="YOU'RE BETTER THAN THIS KID <a href=\"https://www.amazon.com/Nathans-Length-Skinless-Beef-Franks/dp/B00M30BEQO/ref=sr_1_2_0o_na?crid=29MZ8LEKOJYW&keywords=HOT+DOGS&qid=1644174505&sprefix=hot+dogs%2Caps%2C159&sr=8-2\">IMPROVE</a>";
+				holyMoly.innerHTML ="YOU ATE NO WEINERS THIS YEAR";
 
-</script>
 
+
+		
+		}
+		}
+		button.addEventListener("click", makeName)
+
+
+		// 
+
+
+		var goAway = Array.from(document.getElementsByClassName("screen1"))
+		var comeHere = Array.from(document.getElementsByClassName("screen2"))
+
+		// function startHere () {
+		// 	comeHere.forEach(
+		// 		function (element){
+		// 			element.style.opacity = "0";
+		// 			element.style.width = "0px";
+		// 			element.style.height = "0px";
+		// 		});
+		// 	}
+		// startHere();
+
+
+		function screenBlack() {
+			document.body.style.backgroundColor = "#9c4e00";
+			goAway.forEach(
+				function (element) {
+					element.style.opacity = "0";
+					element.style.width = "0px";
+					element.style.height = "0px";
+
+				});
+			comeHere.forEach(
+				function (element) { element.style.opacity = "1" });
+		}
+		button.addEventListener("click", screenBlack)
+
+
+	</script>
 
 </body>

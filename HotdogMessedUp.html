@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hot Digity Dog</title>
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+	
+	h1 {
+		font-family: 'ZCOOL KuaiLe', cursive;
+		font-size: 50px;
+		color: brown;
+		text-align: center;
+		}
+
+	input {
+		  width: 100px;
+		  box-sizing: border-box;
+		  border: 7px solid brown;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  font-color: brown;
+		  background-color: #B6D3BF;
+		  background-size:contain;
+		  background-position: left;
+ 		  background-repeat: no-repeat;
+ 		  text-align: center;
+		}
+
+	body {
+		background: #B6D3BF;
+
+	}
+
+	button {
+		color: brown;
+		background-color: #B6D3BF;
+		font-family: 'ZCOOL KuaiLe', cursive;
+		font-size: 15px;
+		border: 0;
+		z-index: 10;
+	}
+
+	#hotDogHead{
+		width: 600px;
+		height: 600px;
+		background-image: url(Hotdog3.svg);	
+		background-repeat: no-repeat;
+		background-size:cover;
+  		position: relative;
+  		top: 0px;
+		}
+
+
+	#hotDogBig{
+		width: 600px;
+		height: 600px;
+		background-image: url(Hotdog2.svg);
+		position: absolute;	
+		background-repeat: no-repeat;
+		background-size:cover;
+		top: 150px;
+		right: 10px;
+		position: absolute;
+		}
+
+	#hotDogInput{
+		top: 200px;
+		right: 200px;
+		}
+
+	#demo{
+		top: 0;
+		font-family: 'ZCOOL KuaiLe', cursive;
+		font-size: 50px;
+		color: white;
+		text-align: center;
+		z-index: 400;
+		}
+
+	.screen1{
+		opacity: 1;
+	}
+
+	.screen2{
+		opacity: 0;
+	}
+
+	#pic {
+		display: block;
+		width: 60%;
+		height: 600px;
+		background-size: cover;
+
+	</style>
+
+
+<body>
+	<center> <div id="hotDogHead" class="screen1"></div> </center>
+
+	<h1 class="screen1">How many weenies did you <br> 
+	eat this year?</h1>
+	<center> <input type="number" id="hotDogInput" class="screen1"> </input> </center>
+	<center> <button id="enterButton" class="screen1">Calculate</button> </center>
+	
+	<center><p id="demo" class="screen2"> </p></center>
+
+	<center><div id="pic" class="screen2"></div><center>
+
+	<p id="death"></p>
+
+
+<script type="text/javascript">
+	var input;
+	var name;
+	var death = document.getElementById('death');
+	var hotDogNames = ["C'mon", "Glizzy Gobler", "Glizzy Gladiator"];
+	var hotDogIcon = ["url(Cmon.png)", "url(GlizzyGobler.png)", "url(GlizzyGladiator.png)"];
+	var button = document.getElementById("enterButton");
+	var demo = document.getElementById("demo");
+	var pic = document.getElementById("pic");
+
+
+function makeName () {
+ input = document.getElementById("hotDogInput").value;
+	console.log(input);
+    if (input == 0) {name = 0}
+      if  (0 < input < 10) {name = 1}
+     if  (input > 10) {name = 2}
+   	console.log(name)
+ 	demo.innerHTML = "<b>YOU'RE A: </b> <br><br>"+ hotDogNames[name];
+ 	pic.style.backgroundImage = hotDogIcon[name];
+	}
+button.addEventListener("click", makeName)
+ 
+
+
+
+
+var goAway = Array.from(document.getElementsByClassName("screen1"))
+var comeHere = Array.from(document.getElementsByClassName("screen2"))
+
+function screenBlack () {
+ 	document.body.style.backgroundColor = "black";
+	goAway.forEach(
+		function (element){
+			element.style.opacity = "0";
+			element.style.width = "0px";
+			element.style.height = "0px";
+
+		});
+	comeHere.forEach(
+		function (element){element.style.opacity = "1"});
+	}
+button.addEventListener("click", screenBlack)
+ 
+
+
+
+
+      
+
+
+
+</script>
+
+
+</body>
