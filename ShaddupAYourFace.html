@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shaddup Ur Face</title>
+  <style type="text/css"> 
+      #play{     
+      width:400px;
+      height:400px;
+      background-size:contain;
+      background-image:url(PlayButton.png);
+      background-repeat: no-repeat;
+      position:relative;
+    }
+  </style>
+
+</head>
+
+<body>
+  <center><div id=play></div></center>
+  <audio id="sound" src="ShaddapYouFace.mp3"> </audio>
+
+<script type="text/javascript">
+var pew = document.getElementById('sound');
+var playButton = document.getElementById('play');
+
+
+playButton.addEventListener("click", function() {
+  console.log("hi");
+  pew.play() })
+
+</script>
+</body>
+</html>

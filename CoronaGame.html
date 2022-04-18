@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pew Game</title>
+  <style type="text/css">
+      .virus{
+          left:1000px;
+          top:800px;
+/*          background-color:red;
+*/    background-size:contain;
+      width:100px;
+      height:100px;
+      background-image:url(corona.png);
+      transition:.5s;
+      margin:10px;
+      background-position:center;
+      background-repeat: no-repeat;
+      position:absolute;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="sound" src="pew.m4a"> </audio>
+  <p>viruses gone:</p><input id="input"></input>
+
+
+<script type="text/javascript">
+  
+// Define Variables
+
+var pew = document.getElementById('sound');
+var input = document.getElementById ('input');
+var x = 0;
+
+// Create floating viruses
+function createCorona() {
+  var corona = document.createElement('div');
+  document.body.appendChild(corona);
+  corona.classList.add("virus");
+
+// Move viruses
+function changePosition () {
+  corona.style.left = 1000 * Math.random() + "px";
+  corona.style.top = 1000 * Math.random() + "px"; };
+
+// Click to destroy virus & increase input by 1
+corona.addEventListener("click", function() {
+  console.log("hi");
+  x = x + 1;
+  input.value = x;
+  corona.classList.remove("virus");
+  pew.play() })
+
+// Repeat move viruses
+setInterval(changePosition,2000)
+  };
+
+// Repeat create viruses
+setInterval(createCorona, 1000);
+
+
+</script>
+</body>
+</html>

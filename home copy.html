@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pew Game</title>
+  <style type="text/css">
+      .virus{
+          left:1000px;
+          top:800px;
+/*          background-color:red;
+*/    background-size:contain;
+      width:100px;
+      height:100px;
+      background-image:url(corona.png);
+      transition:.5s;
+      margin:10px;
+      background-position:center;
+      background-repeat: no-repeat;
+      position:absolute;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="sound" src="pew.wav"> </audio>
+  <p>viruses gone:</p><input id="input"></input>
+
+
+<script type="text/javascript">
+  
+var pew = document.getElementByld('sound');
+var input = document.getElementByld ('input');
+var X= 0;
+
+function createCorona() {
+  var corona = document.createElement('div');
+  document.body.appendChild(corona);
+  corona.classList.add("virus");
+
+function changePosition () {
+  corona.style.left = 1000 * Math.random() + "px";
+  corona.style.top = 1000 * Math.random() + "px"; };
+
+corona.addEventListener("click", function() {
+  console.log("hi");
+  × = × + 1;
+  input.value = X;
+  corona.classList.remove("virus");
+  pew.play() })
+
+setinterval(changePosition,2000)
+  };
+
+setinterval(create Corona, 1000);
+
+
+</script>
+</body>
+</html>
